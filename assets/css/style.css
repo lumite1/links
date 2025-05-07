@@ -12,14 +12,21 @@
 
 body {
 	background-image: url("../img/bg.png");
-	color: var(--fg);
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	min-height: 100vh;
 	font-family: "Metamorphous", serif;
+	color: var(--fg);
 }
 
 main {
-	margin: auto;
+	margin: 0 auto;
 	text-align: center;
-	max-width: 80%;
+	width: 100%;
+	max-width: 40rem;
+	padding: 1rem;
 }
 
 h1 {
@@ -35,13 +42,14 @@ h2 {
 }
 
 .topBar {
-	overflow: hidden;
+	display: flex;
+	justify-content: flex-end;
 	padding: 0.7rem;
 }
-
+  
 .topBar img {
-	float: right;
-	padding: 1rem;
+	width: 2rem;
+	height: 2rem;
 }
 
 .links {
