@@ -1,21 +1,19 @@
+@import url('https://fonts.googleapis.com/css2?family=Metamorphous&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&display=swap');
+
 :root {
-	--fg: #edf4f5;
+	--fg: #edf4f5ea;
 	--bg: #1d2021;
 	--bg2: #434343;
-	--accent1: #3c78d8;
-	--card-bg: #edf4f5;
+	--accent1: #d8ce3c;
+	--card-bg: #edf4f5ea;
 	--card-fg: #1d2021;
 }
 
 body {
-	background-color: var(--bg);
+	background-image: url("../img/bg.png");
 	color: var(--fg);
-	font-family: "Hack", Arial, Helvetica, sans-serif;
-	margin: 0;
-}
-
-body, .card {
-	transition: background-color 0.3s ease, color 0.3s ease;
+	font-family: "Metamorphous", serif;
 }
 
 main {
@@ -24,13 +22,10 @@ main {
 	max-width: 80%;
 }
 
-h1, h2, a, a:visited {
-	color: var(--accent1);
-}
-
 h1 {
 	font-size: 8rem;
 	margin-bottom: 0;
+	color: var(--accent1);
 }
 
 h2 {
@@ -59,13 +54,13 @@ h2 {
 
 .card {
 	width: 100%;
-	max-width: 400px;
+	max-width: 26rem;
 	background: var(--card-bg);
 	border-radius: 12px;
-	box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+	box-shadow: 0 4px 12px var(--card-fg);
 	overflow: hidden;
-	transition: transform 0.25s ease, box-shadow 0.25s ease;
-	border: 1px solid var(--card-fg);
+	transition: transform 0.15s ease, box-shadow 0.15s ease;
+	border: 2px solid var(--card-fg);
 	position: relative;
 }
 
@@ -76,45 +71,20 @@ h2 {
 	padding: 1rem;
 	text-decoration: none;
 	color: var(--card-fg);
-	font-weight: bold;
-}
-
-body.outlined .card {
-	border: 1px solid var(--card-fg);
+	font-family: "Figtree", sans-serif;
 }
 
 .card a img {
-	width: 32px;
-	height: 32px;
-}
-
-body.outlined .topBar img {
-	filter: invert(1);
-	transition: filter 0.3s ease;
+	width: 2rem;
+	height: 2rem;
 }
 
 .card:hover {
 	transform: translateY(-3px);
-	box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
+	box-shadow: 0 6px 18px var(--card-fg);
 }
 
-.tooltip {
-	position: absolute;
-	bottom: 100%; /* Show above the card */
-	right: 1rem;
-	background: black;
-	color: white;
-	padding: 0.3rem 0.6rem;
-	border-radius: 4px;
-	font-size: 0.85rem;
-	white-space: nowrap;
-	opacity: 0;
-	pointer-events: none;
-	transform: translateY(-0.5rem);
-	transition: opacity 0.2s ease, transform 0.2s ease;
-}
-
-.card.showing-tooltip .tooltip {
-	opacity: 1;
-	transform: translateY(-1rem);
+footer {
+	text-align: center;
+	margin-top: 4rem;
 }
